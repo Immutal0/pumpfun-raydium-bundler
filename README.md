@@ -2,7 +2,7 @@
 
 This bot allows you bundle create & buy transactions on Pumpfun.
 
-## I have upgraded version that can bundle 28 buys.
+## I have upgraded version that can bundle 20 buys.
 
 https://solscan.io/tx/5MtjdECJtnZ1HVmRViqvVRjy425fPkhdjy5BDmjcGBrbPZK9y6caMkPmfwxycVMAKtdXRF8HXDAoVRkwAqABg3q5
 https://solscan.io/tx/4YCPCrhUYEaeKw1qb7JCf24nHJ5c6NNiRpAqyttkmaLuEduvoE6Aqqh8SkHBoN352FTHWCFVVGuavUdPajSKEMZw
