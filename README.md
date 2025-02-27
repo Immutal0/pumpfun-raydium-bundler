@@ -1,6 +1,6 @@
 # 🤖Pumpfun Bundler
 
-This bot allows you bundle create & buy transactions on Pumpfun.
+Pumpfun bundler which allows you bundle create & buy transactions on Pumpfun.
 
 ## I have upgraded version that can bundle 20 buys.
 
