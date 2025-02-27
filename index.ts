@@ -43,23 +43,22 @@ const main = async () => {
 
   const private_key = process.env.PRIVATE_KEY;
 
-  const your_account = Keypair.fromSecretKey(bs58.decode(private_key));
   const buyer = Keypair.fromSecretKey(bs58.decode(private_key));
-  const mint = Keypair.fromSecretKey(bs58.decode(private_key));
+  const mint = Keypair.generate();
 
   await printSOLBalance(
     connection,
-    your_account.publicKey,
+    buyer.publicKey,
     "Your Account Pubkey :"
   );
 
   let sdk = new PumpFunSDK(provider);
 
-  let currentSolBalance = await connection.getBalance(your_account.publicKey);
+  let currentSolBalance = await connection.getBalance(buyer.publicKey);
   if (currentSolBalance == 0) {
     console.log(
       "Need some SOL to the your account:",
-      your_account.publicKey.toBase58()
+      buyer.publicKey.toBase58()
     );
     return;
   }
@@ -80,9 +79,9 @@ const main = async () => {
     };
 
     let createResults = await sdk.createAndBuy(
-      your_account,
+      buyer,
       mint,
-      [your_account, buyer], // buyers
+      [buyer], // buyers
       tokenMetadata,
       BigInt(0.0001 * LAMPORTS_PER_SOL),
       SLIPPAGE_BASIS_POINTS,
@@ -97,12 +96,12 @@ const main = async () => {
       console.log(createResults.jitoTxsignature);
       boundingCurveAccount = await sdk.getBondingCurveAccount(mint.publicKey);
       console.log("Bonding curve after create and buy", boundingCurveAccount);
-      printSPLBalance(connection, mint.publicKey, your_account.publicKey);
+      printSPLBalance(connection, mint.publicKey, buyer.publicKey);
     }
   } else {
     console.log("boundingCurveAccount", boundingCurveAccount);
     console.log("Success:", `https://pump.fun/${mint.publicKey.toBase58()}`);
-    printSPLBalance(connection, mint.publicKey, your_account.publicKey);
+    printSPLBalance(connection, mint.publicKey, buyer.publicKey);
   }
 };
 

@@ -121,6 +121,7 @@ export class PumpFunSDK {
           buyAmount,
           buyAmountWithSlippage
         );
+
         const buyVersionedTx = await buildTx(
           this.connection,
           buyTx,
