@@ -41,3 +41,8 @@ Telegram: [@Immutal0](https://t.me/Immutal0) <br>
     ```
     npm start
     ```
+
+## Update metada
+
+    Update metadata.ts, /upload/img.png and /upload/metadata.json.
+    Then you can create your own token.
