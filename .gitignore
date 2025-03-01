@@ -1,0 +1,16 @@
+.anchor
+.DS_Store
+target
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+
+dist/
+
+.keys*/
+.keys*/**
+
+.env
+.env.copy
+refs/
