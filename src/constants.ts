@@ -1,3 +1,6 @@
+// Date:    03/01/2025 
+// Authour: Immutal0
+
 export const RPC_ENDPOINT =
   "https://mainnet.helius-rpc.com/?api-key=c7de8383-67ff-4e3b-aba5-c7c915635375/";
 export const RPC_WEBSOCKET_ENDPOINT =

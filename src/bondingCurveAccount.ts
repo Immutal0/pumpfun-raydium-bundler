@@ -1,3 +1,6 @@
+// Date:    03/01/2025 
+// Authour: Immutal0
+
 import { struct, bool, u64, Layout } from "@coral-xyz/borsh";
 
 export class BondingCurveAccount {

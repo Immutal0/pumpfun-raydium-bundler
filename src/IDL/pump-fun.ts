@@ -1,3 +1,6 @@
+// Date:    03/01/2025 
+// Authour: Immutal0
+
 export type PumpFun = {
   address: "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P";
   metadata: {

@@ -1,3 +1,6 @@
+// Date:    03/01/2025 
+// Authour: Immutal0
+
 const metadata = {
     "name": "Immutal0 Token",
     "symbol": "IMMUTAL0",
