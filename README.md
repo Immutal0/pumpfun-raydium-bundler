@@ -34,9 +34,10 @@ Telegram: [@Immutal0](https://t.me/Immutal0) <br>
     ```
 3. Configure the environment variables
 
-    Rename the .env.example file to .env and set RPC and WSS, main keypair's secret key, and others.
+    Rename the .env.example file to .env and set RPC, main keypair's secret key.
+    Update metadata.ts, ./upload/img.png, ./upload/metadata.json for your token.
 
-4. Run the bot
+5. Run the bot
 
     ```
     npm start
