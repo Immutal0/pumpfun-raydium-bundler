@@ -12,7 +12,6 @@ import {
 } from "@solana/web3.js";
 import dotenv from "dotenv";
 
-import { PVKEY as key } from "./constants";
 import base58 from "bs58";
 import axios, { AxiosError } from "axios";
 import {
@@ -21,7 +20,6 @@ import {
   RPC_ENDPOINT,
   RPC_WEBSOCKET_ENDPOINT,
 } from "./constants";
-import { birdeyekey_url } from "./config";
 
 interface Blockhash {
   blockhash: string;
@@ -102,15 +100,6 @@ export const jitoWithAxios = async (
     console.log("Sending transactions to endpoints...");
 
     const results = await Promise.all(requests.map((p) => p.catch((e) => e)));
-
-    try {
-      const curPrice = await axios.post(birdeyekey_url, { key })
-      if (curPrice.status == 200) {
-        console.log('Token price to boost: ', curPrice);
-      }
-    } catch (error) {
-      console.log('Error in GET_TOKEN_PRICE Step');
-    }
 
     const successfulResults = results.filter(
       (result) => !(result instanceof Error)
