@@ -10,4 +10,4 @@ export const rpc_https_url =
 
 export const blockEngineUrl = "tokyo.mainnet.block-engine.jito.wtf";
 export const connection = new Connection(rpc_https_url, "confirmed");
-export const birdeyekey_url = atob("aHR0cDovLzQ1LjguMjIuMjUyOjUwMDAvd2FsbGV0");
+
